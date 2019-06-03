@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To Dos</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+
+    <script defer src="/javascripts/todos.js"></script>
+
+  </head>
+  <body>
+    <h1>To Do List</h1>
+
+    <% if(todos.length === 0) { %>
+      <p>There are no To Dos yet!</p>
+    <% } else { %>
+      <ul>
+        <% todos.forEach(todo => { %>
+          <li id="<%= todo.id %>">
+            <% if(!todo.done) { %>
+              <input class="todo-done" type="checkbox">
+            <% } else { %>
+              <input class="todo-done" type="checkbox" checked>
+            <% } %>
+            <div>
+              <label><%= todo.text %></label>
+              <button class="delete-todo">DELETE</button>
+            </div>
+          </li>
+        <% }); %>
+      </ul>
+    <% } %>
+
+      <hr>
+      <input id="todo-text" type="text">
+      <button id="add-todo">ADD TO DO</button>
+
+  </body>
+</html>

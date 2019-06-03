@@ -1,0 +1,37 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+li {
+  list-style: none;
+  padding: 4px 0;
+}
+
+div {
+  display: inline-flex;
+  width: 256px;
+  justify-content: space-between;
+}
+
+
+button {
+  background-color: white;
+  border: 1px solid red;
+  border-radius: 4px;
+  color: red;
+  font-size: 8pt;
+  line-height: 20px;
+  height: 20px;
+}
+
+button:hover {
+  background-color: red;
+  border: 1px solid black;
+  color: white;
+  transition: 500ms;
+}
